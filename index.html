@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>drsh</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="drsh dot io" />
+    <meta property="og:title" content="drsh">
+    <meta property="og:description" content="drsh dot io">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drsh.io">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/normalize-css/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/ia-writer-quattro/index.css">
+    <style>
+      :root {
+        --background-color: #FFFBEF;
+        --font-color: #5C6A72;
+        --primary-color: #3A94C5;
+        --invert-font-color: #FFFBEF;
+        --code-bg-color: #F2EFDF;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #2D353B;
+          --font-color: #D3C6AA;
+          --primary-color: #A7C080;
+          --invert-font-color: #2D353B;
+          --code-bg-color: #343F44;
+        }
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      html * {
+        font-family: 'iA Writer Quattro', monospace;
+      }
+
+      html {
+        display: table;
+        margin: auto;
+      }
+
+      body {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      div.recent-played p.recent-played-track {
+        display: inline;
+        text-transform: lowercase;
+      }
+
+      video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2 class="terminal-prompt">drsh.io</h2>
+      <code>aka drsh0</code>
+      <br>
+      <strong>📓 personal blog</strong>: <a href="https://life.drsh.io" target="_blank" rel="noopener noreferrer">life.drsh.io</a>
+      <br>
+      <strong>💾 tech blog</strong>: <a href="https://tech.drsh.io" target="_blank" rel="noopener noreferrer">tech.drsh.io</a>
+      <br>
+      <strong>📷 photography</strong>: <a href="https://www.instagram.com/darsh.35mm/" target="_blank" rel="noopener noreferrer">@darsh.35mm</a>
+      <br>
+      <strong>🎵 what i listen to</strong>: <a href="https://www.last.fm/user/drsh0_" target="_blank" rel="noopener noreferrer">last.fm</a>
+      <br>
+      <!-- credit: https://recentfm.rknight.me/ -->
+      <script src="https://recentfm.rknight.me/now.js?u=drsh0_" async></script>
+      <strong>🐦 birdwatching sydney</strong>: <a href="https://birb.watch" target="_blank" rel="noopener noreferrer">birb.watch</a>
+      <blockquote>
+        <em>you're gonna carry that weight</em>
+      </blockquote>
+      <video id="bgvideo" autoplay muted loop playsinline preload="auto" src="background.mp4" aria-label="cowboy bebop scene of a golden butterfly fluttering and fading away">
+        Your browser doesn't support video playback.
+      </video>
+    </div>
+    <script>
+      (function () {
+        var v = document.getElementById('bgvideo');
+        v.muted = true;
+        v.play().catch(function () {});
+      })();
+    </script>
+  </body>
+</html>
